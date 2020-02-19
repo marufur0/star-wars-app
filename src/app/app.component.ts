@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   public films: any;
   public species: any;
   public vehicles: any;
-  public spaceships: any;
+  public starships: any;
 
   public isLoading: boolean;
   public isError: boolean;
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
     promises.push(this.StarWarsService.getResource('films'));
     promises.push(this.StarWarsService.getResource('species'));
     promises.push(this.StarWarsService.getResource('vehicles'));
-    promises.push(this.StarWarsService.getResource('spaceships'));
+    promises.push(this.StarWarsService.getResource('starships'));
 
     Promise.all(promises)
     .then((response: any) => {
@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
       this.films = response[2].results;
       this.species = response[3].results;
       this.vehicles = response[4].results;
-      this.spaceships = response[5].results;
+      this.starships = response[5].results;
     })
     .catch(() => {
       this.isError = true;

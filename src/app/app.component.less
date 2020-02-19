@@ -1,0 +1,62 @@
+.star-wars-app {
+    background-color: aliceblue;
+    border: 1px solid black;
+}
+
+.global-title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 32px;
+    font-family: cursive;
+    font-weight: bold;
+    color: cornflowerblue;
+}
+
+.resource-header {
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.resource-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.resource {
+    font-family: monospace;
+    padding: 8px;
+    border: 1px solid green;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+    font-size: 20px;
+    color: red;
+    margin: auto;
+    text-align: center;
+}
