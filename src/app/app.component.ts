@@ -27,31 +27,31 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.isLoading = true;
-    this.isError = false;
+    // this.isLoading = true;
+    // this.isError = false;
 
-    let promises: Promise<any>[] = [];
-    promises.push(this.StarWarsService.getResource('people'));
-    promises.push(this.StarWarsService.getResource('planets'));
-    promises.push(this.StarWarsService.getResource('films'));
-    promises.push(this.StarWarsService.getResource('species'));
-    promises.push(this.StarWarsService.getResource('vehicles'));
-    promises.push(this.StarWarsService.getResource('starships'));
+    // let promises: Promise<any>[] = [];
+    // promises.push(this.StarWarsService.getResource('people'));
+    // promises.push(this.StarWarsService.getResource('planets'));
+    // promises.push(this.StarWarsService.getResource('films'));
+    // promises.push(this.StarWarsService.getResource('species'));
+    // promises.push(this.StarWarsService.getResource('vehicles'));
+    // promises.push(this.StarWarsService.getResource('starships'));
 
-    Promise.all(promises)
-    .then((response: any) => {
-      this.people = response[0].results;
-      this.planets = response[1].results;
-      this.films = response[2].results;
-      this.species = response[3].results;
-      this.vehicles = response[4].results;
-      this.starships = response[5].results;
-    })
-    .catch(() => {
-      this.isError = true;
-    })
-    .finally(() => {
-      this.isLoading = false;
-    });
+    // Promise.all(promises)
+    // .then((response: any) => {
+    //   this.people = response[0].results;
+    //   this.planets = response[1].results;
+    //   this.films = response[2].results;
+    //   this.species = response[3].results;
+    //   this.vehicles = response[4].results;
+    //   this.starships = response[5].results;
+    // })
+    // .catch(() => {
+    //   this.isError = true;
+    // })
+    // .finally(() => {
+    //   this.isLoading = false;
+    // });
   }
 }
